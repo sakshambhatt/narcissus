@@ -58,7 +58,10 @@ function quizFunction(array) {
   console.log(userName + " your score is: " + score);
   displayHighscores();
   console.log("-----------------------");
-  console.log("If you think you beat or matched the highscore, please send a screenshot to the creator");
+  
+  if(score >= highscores[0].score) {
+    console.log("I think you beat or matched the highscore, please send a screenshot to the creator");
+  }
 }
 
 var userName = readLineSync.question("Please enter your name to begin: ");
